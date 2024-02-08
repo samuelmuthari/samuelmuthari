@@ -1,0 +1,149 @@
+Write a program that prints the numbers from 1 to 100. For multiples of 3, print "Fizz"; for
+multiples of 5, print "Buzz"; and for numbers that are multiples of both 3 and 5, print
+"FizzBuzz".
+#include <iostream>
+
+int main() {
+    for (int i = 1; i <= 100; ++i) {
+        if (i % 3 == 0 && i % 5 == 0) {
+std::cout << "FizzBuzz" << std::endl;
+        } else if (i % 3 == 0) {
+std::cout << "Fizz" << std::endl;
+        } else if (i % 5 == 0) {
+std::cout << "Buzz" << std::endl;
+        } else {
+            std::cout << i << std::endl;
+}
+    }
+    return 0;
+}
+
+Write a program to generate the Fibonacci sequence up to 100.
+#include <iostream>
+
+int main() {
+    int num1 = 0, num2 = 1, nextTerm = 0;
+
+std::cout << "Fibonacci Series up to 100:" << std::endl;
+    std::cout << num1 << " " << num2 << " ";
+
+    nextTerm = num1 + num2;
+
+    do {  
+      std::cout << nextTerm << "
+std::cout << nextTerm << " ";
+        num1 = num2;
+        num2 = nextTerm;'
+        nextTerm = num1 + num2;
+    }
+
+    std::cout << std::endl;
+
+    return 0;
+}
+Write a program that takes an integer as input and returns true if the input is a power of two.
+int main() {
+    int num;
+    std::cout << "Enter an integer: ";
+```cpp
+std::cin >> num;
+if (isPowerOfTwo(num))
+    std::cout << num << " is a power of two." << std::endl;
+else
+    .
+```
+std::cout << num << " is not a power of two." << std::endl;
+    }
+    return 0;
+}
+Write a program that accepts a string as input, capitalizes the first letter of each word in the
+string, and then returns the result string.
+
+#include <iostream>
+#include <string>
+#include <cctype>
+
+std::string capitalizeFirstLetter(std::string str) {
+```cpp
+for (size_t i = 0; i < str.length(); ++i)
+{
+    if (i == 0 || isspace(str[i - 1]))
+    {
+        str[i] = toupper(str[i]);
+    }
+}
+```
+} else {
+            str[i] = tolower(str[i]);
+        }
+    }
+    return str;
+}
+
+int main() {
+std::string inputString;
+    std::cout << "Enter a string: ";
+    std::getline(std::cin, inputString);
+
+    std::string result = capitalizeFirstLetter(inputString);
+    std::cout << "Result: " << result << std::endl;
+
+    return 0;}
+Write a program that takes an integer as input and returns an integer with reversed digit
+ordering.
+#include <iostream>
+
+int reverseInteger(int num) {
+    int reversed = 0;
+    while (num != 0) {
+        int digit = num % 10;
+reversed = reversed * 10 + digit;
+        num /= 10;
+    }
+    return reversed;
+}
+int main() {
+    int num;
+std::cout << "Enter an integer: ";
+  std::cin >> num;
+
+  int reversedNum = reverseInteger(num);
+
+  std::cout << "Reversed integer: " << reversedNum << std::endl;
+
+  return 0;
+}
+
+Write a program that counts the number of vowels in a sentence.
+#include <iostream>
+#include <string>
+#include <cctype>
+
+int countVowels(const std::string& sentence) {
+    int vowelCount = 0;
+    for (char ch : sentence) {
+      ch = tolower(ch);
+      // .
+      // Adjust the vowel count
+    }
+  }
+  return vowelCount;
+}
+char lowercaseCh = std::tolower(ch);
+        // Check if the character is a vowel
+if (lowercaseCh == 'a' || lowercaseCh == 'e' || lowercaseCh == 'i' || lowercaseCh == 'o' || lowercaseCh == 'u')
+            ++vowelCount;
+}
+    }
+    return vowelCount;
+}
+
+int main() {
+    std::string sentence;
+    std::cout << "Enter a sentence: ";
+    std::getline(std::cin, sentence);
+
+int vowelCount = countVowels(sentence);
+
+std::cout << "The number of vowels present in the given sentence is: " << vowelCount << std::endl
+
